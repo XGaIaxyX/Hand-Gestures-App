@@ -1,0 +1,82 @@
+ 
+<html>
+  <head>
+    <title>Hand Gestures Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+  <div class="container">
+  
+    <center>
+      <h3 class = "btn btn-warning heading">Hand Gestures App
+        <br>
+        <span>&#x1f44d;</span>
+        <span>&#x1f91e;</span>
+        <span>&#x1f44e;</span>
+        <span>&#x270c;</span>
+        <span>&#x1f44c;</span>
+      </h3>
+
+      <br><br>
+
+      <p style="font-size: 22px;">Take a picture of the following hand gestures, Like/Good, Good Luck, Dislike/Bad, Peace, and Amazing/Ok 
+      	<br>
+        <b style="color: red">Is it the Like/Good Emoji?</b>
+        <br>
+        <b style="color: orange">Is it the Good Luck/Fingers Crossed Emoji?</b>
+        <br>
+        <b style="color: yellow">Is it the Dislike/Bad Emoji?</b>
+        <br>
+        <b style="color: lightgreen">Is it the Peace/Victory Emoji?</b>
+        <br>
+        <b style="color: skyblue">Is it the Amazing/Ok Hand Emoji?</b>
+        <br>
+      </p>
+
+      <div class="col-md-4 col-sm-12 col-xs-12">
+	      <label>Webcam View - </label>
+        <div id = "camera"></div>
+        <br>
+        <br>
+        <button onclick = "take_snapshot();" class = "btn btn-warning">Capture Image</button>
+        </div>
+
+        <div class="col-md-4 col-sm-12 col-xs-12">
+	      <label>Prediction 1 - </label>
+        <p class = "handgesture_name" id = "result_handgesture_name"></p>
+        <p class = "handgesture" id = "update_handgesture"></p>
+
+	      <label>Prediction 2 - </label>
+        <p class = "handgesture_name" id = "result_handgesture_name2"></p>
+        <p class = "handgesture" id = "update_handgesture2"></p>
+        </div>
+
+      <div class="col-md-4 col-sm-12 col-xs-12">
+	      <label>Snapshot - </label>
+        <div id = "result"></div>
+         <br>
+        <br>
+        <button onclick = "check();" class = "btn btn-warning">Predict Hand Gesture Emoji</button>
+      </div>
+
+      </div>
+
+    </center>
+
+  </div>
+
+<script src="main.js"></script>
+
+  </body>
+</html>
+
+ 
